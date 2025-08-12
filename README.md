@@ -1,83 +1,49 @@
-LLM-Driven Prompt Evaluation & Optimization Pipeline
-Project Overview
-This project implements an automated pipeline designed to create, evaluate, and optimize prompt versions for large language models (LLMs) used in financial AI applications. The pipeline enables continuous improvement of prompt quality by scoring LLM outputs, detecting hallucinations, and selecting the best performing prompts to enhance response accuracy and reliability.
+ LLM-Driven Prompt Evaluation & Optimization Pipeline
 
-This solution supports finance-focused AI agents by improving the fidelity of answers related to transaction analysis, reporting, and client communications. The modular design facilitates easy integration with OpenAI’s GPT models and can be extended with advanced evaluation heuristics for production-grade use.
+ Project Overview
 
-Key Features
-Prompt Versioning: Easily create and manage multiple prompt variants to test different wording and instructions.
+This project is an automated pipeline designed to create, evaluate, and optimize prompt versions for large language models (LLMs) used in financial AI applications. It enables continuous improvement of prompt quality by generating, scoring, and selecting the best prompts to maximize accuracy and reduce hallucinations. This pipeline supports AI agents handling transaction analysis, financial reporting, and customer communication, ensuring precise and reliable output.
 
-Automated Evaluation: Generate answers using LLMs and score them using a custom heuristic to detect hallucinations or uncertainty.
+ Features
 
-Performance Metrics: Calculate average prompt scores over sample financial queries for objective comparison.
+- Prompt Versioning: Create and manage multiple prompt variants to test and improve model responses.  
+- Automated Scoring: Evaluate prompt outputs using a custom heuristic to detect hallucinations and uncertainty.  
+- Performance Metrics: Compute average scores on sample financial queries for objective prompt comparison.  
+- Best Prompt Selection: Automatically select the highest performing prompt for deployment.  
+- Modular Design: Easily integrates with OpenAI’s GPT models and can be extended to other LLM providers or datasets.  
+- Sample Financial Data: Includes example transaction data for prompt testing.
 
-Best Prompt Selection: Automatically identify the highest performing prompt to deploy in AI workflows.
+ Tech Stack
 
-Modular & Extensible: Designed for integration with OpenAI API and easy adaptation to other LLM providers or datasets.
+- Python 3.8+  
+- OpenAI GPT-3 API (text-davinci-003 engine)  
+- Python libraries: langchain (optional), requests  
+- Development Tools: Git, virtual environments
 
-Sample Financial Dataset: Included sample transactions for prompt testing and evaluation.
+ Getting Started
 
-Tech Stack & Tools
-Programming Language: Python 3.8+
+ Prerequisites
 
-APIs: OpenAI GPT-3 (text-davinci-003 engine)
+- Python 3.8 or higher  
+- OpenAI API key (sign up at https://beta.openai.com/signup/)  
+- Git installed
 
-Libraries:
+ Clone the Repository
 
-langchain (optional, for future extensions)
-
-requests (for API calls)
-
-Development Tools: Git, virtual environments
-
-Getting Started
-Prerequisites
-Python 3.8 or higher installed
-
-OpenAI API key (sign up at OpenAI)
-
-Git installed for cloning the repo
-
-Clone the Repository
 bash
-Copy code
-git clone https://github.com/your-username/llm-prompt-eval-optimization-pipeline.git
+git clone https://github.com/Charanlokesh22/llm-prompt-eval-optimization-pipeline.git
 cd llm-prompt-eval-optimization-pipeline
+
 Setup Virtual Environment and Install Dependencies
-Create and activate a virtual environment:
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate       # For Linux/macOS
-venv\Scripts\activate          # For Windows
-Install required Python packages:
+-python -m venv venv
+-source venv/bin/activate       
+-venv\Scripts\activate          
+-pip install -r requirements.txt
 
-bash
-Copy code
-pip install -r requirements.txt
-Configuration
-Add your OpenAI API key to the config.py file:
+Configure API Key
+- OPENAI_API_KEY = "your-openai-api-key-here"
 
-python
-Copy code
-OPENAI_API_KEY = "your-openai-api-key-here"
-Running the Pipeline
-Start the evaluation and optimization pipeline by running:
+Run the Pipeline
+-python app.py
 
-bash
-Copy code
-python app.py
-The script will:
-
-Load the sample financial transaction dataset.
-
-Create multiple prompt versions.
-
-Generate answers to financial queries using OpenAI GPT.
-
-Score the answers for accuracy and hallucination detection.
-
-Output average scores per prompt version.
-
-Display the best prompt to use in production.
