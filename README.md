@@ -44,6 +44,6 @@ Setup Virtual Environment and Install Dependencies
 Configure API Key
 - OPENAI_API_KEY = "your-openai-api-key-here"
 
-Run the Pipeline
+Run the Pipeline :
 -python app.py
 
