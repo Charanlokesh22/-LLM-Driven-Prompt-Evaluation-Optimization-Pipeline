@@ -1,0 +1,10 @@
+llm-prompt-eval-optimization-pipeline/
+│
+├── app.py                     
+├── prompt_manager.py          
+├── evaluation.py            
+├── config.py                  
+├── requirements.txt          
+├── README.md                 
+└── data/
+    └── financial_dataset.json  
