@@ -1,4 +1,4 @@
-# app.py
+
 import json
 from config import OPENAI_API_KEY
 from prompt_manager import PromptManager
